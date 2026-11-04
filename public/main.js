@@ -4,6 +4,23 @@ const textinput = applicationForm.elements.text
 const sendbtn = applicationForm.elements.btn
 const msgcontainer = document.querySelector(".msg")
 const msgscontainer = document.querySelector(".messages")
+const navmenubtn = document.querySelector(".back")
+const navmenu = document.querySelector(".navsetmenu")
+const logoutbtn = document.querySelectorAll(".pos")[0]
+
+logoutbtn.addEventListener("click" , () => {
+    window.location.href = "/logout"
+})
+
+navmenubtn.addEventListener("click", function(){
+    navmenu.classList.add("navsetmenuOn")
+})
+
+window.addEventListener("click", function(event){
+    console.log(document.querySelector(".logobackground"))
+    if(event.target == document.querySelector(".logobackground") || event.target == document.querySelector(".username") || event.target == this.document.querySelector(".imgsett") || event.target == this.document.querySelector(".back")) console.log("target");
+    else navmenu.classList.remove("navsetmenuOn")
+})
 
 fetch("/getmsg", {
     method: "GET",

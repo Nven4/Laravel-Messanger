@@ -12,10 +12,20 @@
             <h1>Messanger</h1>
         </div>
         <div class="profile">
-            <div class="logobackground">
-                {{Auth::user()->name[0]}}
+            <div class="navsetmenu">
+                <div class="pos">
+                    <img src="logout.png" alt="">
+                    <p>Log out</p>
+                </div>
             </div>
-            <p class="username">{{Auth::user()->name}}</p>
+                <div class="back">
+                    <div class="logobackground">
+                        {{Auth::user()->name[0]}}
+                    </div>
+                    <p class="username">{{Auth::user()->name}}</p>
+                    <img class="imgsett" src="setting.png" alt="">
+                </div>
+            </div>
         </div>
     </div>
     <div class="right">
@@ -27,7 +37,7 @@
             <form action="" method="post">
                 <input type="text" name="text" placeholder="Введите ваше сообщение" autocomplete="off">
                 <div class="btn">
-                    <button name="btn" class="btndisabled" type="sumbit">Отправить</button>
+                    <button type="sumbit" class="btndisabled" name="btn">Отправить</button>
                 </div>
             </form>
         </div>

@@ -33,3 +33,5 @@ Route::post("/checkname", [Validate::class, "checkNameExist"]);
 Route::get("/login", [Login::class, "create"]);
 
 Route::post("/login", [Login::class, "login"]);
+
+Route::get("/logout", [Main::class, "logout"]);

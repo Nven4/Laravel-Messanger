@@ -39,4 +39,9 @@ class Main extends Controller
             "result" => Message::all(),
         ]);
     }
+
+    public function logout(){
+        Auth::logout();
+        return redirect("/login");
+    }
 }

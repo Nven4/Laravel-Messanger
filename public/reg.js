@@ -65,10 +65,6 @@ aplicationform.addEventListener("submit", function(event){
         AddErrorMessage("Пароль должен содержать больше 4 символов", name, 1)
     }
 
-    else if(name.value.length > 16){
-        AddErrorMessage("Имя не может содержать больше 16 символов", name, 1)
-    }
-
     else if(name.value.includes(" ")){
         AddErrorMessage("Имя не может содержать пробелы", name, 1)
     }
@@ -92,6 +88,10 @@ aplicationform.addEventListener("submit", function(event){
 
     else if(nameexist){
         AddErrorMessage("Такое имя уже сущевтсвует", name, 1)
+    }
+
+    else if(name.value.length > 16){
+        AddErrorMessage("Имя не может содержать больше 16 символов", name, 1)
     }
 
     else{
